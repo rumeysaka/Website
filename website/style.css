@@ -4,26 +4,26 @@
     box-sizing: border-box;
 }
 html{
-    font-size: 10px;
+    font-size: 6px;
 }
 body{
-    font-size: 'lato', sans-serif;
+    font-family: 'lato', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.5;
     background-color: #fff;
-    
+
 }
 h1,h2,h3,h4,h5,h6{
     font-weight: 700;
     font-family:'Montserrat', sans-serif;
-    
+
 }
 a{
     text-decoration: none;
 }
 section{
-    
+
     height: 90rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -85,12 +85,59 @@ ul{
     display:block;
     clear: both;
 }
+.col {
+	float: left;
+	width: 100%;
+	padding: 1rem;
+}
 .container{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+@media (min-width: 576px){
+ .container{
+    max-width: 540px;
+ }
+ html{
+     font-size: 7px;
+ }
+}
+@media (min-width: 768px){
+.container{
+     max-width: 720px;
+ } 
+ html{
+    font-size: 8px;
+}
+.col {
+	float: left;
+	width: 50%;
+	padding: 1rem;
+}
+}
+@media (min-width: 992px){
+    .container{
+     max-width: 960px;
+    } 
+    html{
+        font-size: 9px;
+    }
+    .col {
+        float: left;
+        width: 33%;
+        padding: 1rem;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+     max-width: 1140px;
+    }
+    html{
+        font-size: 10px;
+    }
 }
 .text-uppercase{
     text-transform: uppercase;
@@ -111,7 +158,7 @@ nav{
     padding-top: 0.5rem;
 }
 #logo-box .logo{
-    
+
     color: #faf09a;
     font-weight: 700;
     font-size: 3.2rem;
@@ -127,17 +174,45 @@ nav{
 
 }
 #nav-links .nav-link{
-    
+
     color: #faf09a;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 700;
     padding: 1.6rem;
     letter-spacing: 0.1rem;
     transition: color 0.3s;
 }
 #nav-links .nav-link:hover{
-    color: #a9d1d1;
-
+    color: #ffffff;
+}
+.nav-link-icon{
+    display: none;
+}
+@media (max-width:992px){
+    #logo-box{
+        float:none;
+        text-align: left;
+    }
+    #nav-links{
+        float:none;
+    }
+    #nav-links .nav-item{
+        float: none;
+        text-align: left;
+        padding-bottom: 1.2rem;
+    }
+    #navl-links .nav-link{
+        font-size: 2rem;
+        padding-left: 0;
+    }
+    #nav-links .nav-link-icon{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        font-size: 3rem;
+    }
+    
 }
 /*header*/
 header{
@@ -159,10 +234,10 @@ header h2{
 }
 .dark{
     border: none;
-    border-top: 4px solid rgb(44, 44, 44);
+    border-top: 0.4rem solid rgb(44, 44, 44);
     padding: 5px;
-    max-width: 450px;
-    margin: 25px auto ;
+    max-width: 45rem;
+    margin: 2.5rem auto ;
 
 }
 #downward-arrow{
@@ -180,18 +255,12 @@ header h2{
     font-size: 4.8rem;
     color: rgb(44, 44, 44);
 }
-.col {
-	float: left;
-	width: 33.33333%;	
-	padding: 10px;
-}
-
 .portfolio-item {
 	position: relative;
 }
 
 .portfolio-item img {
-	display: block;	
+	display: block;
 }
 
 
@@ -222,36 +291,53 @@ header h2{
 }
 #about{
     background-color: khaki;
-    height: 600px;
+    height: 800px;
     color: rgb(44, 44, 44);
 }
 #about h2{
-    font-size: 48px;
-    margin-top: 45px;
+    font-size: 4.8rem;
+    margin-top: 4.5rem;
 }
 #about-text{
     text-align: left;
 }
 #about-text .left{
-    float:left;
-    width: 50%;
-    padding-right: 20px;
-    padding-left: 23rem;
+    float:none;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 25px;
 }
 #about-text .right{
-    padding-right: 20px;
-    float:right;
-    width: 50%;
-    padding-right: 23rem;
+    float:none;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 25px;
+}
+@media (min-width:992px){
+        
+    #about-text .left{
+        float:left;
+        width: 50%;
+        padding-right:10px ;
+        padding-left: 210px;
+    }
+    #about-text .right{
+        float:right;
+        width: 50%;
+        padding-right: 210px;
+        padding-left: 10px;
+    }
 }
 #about-text .text {
     font-size: 2rem;
-    Font-Family: 'Lato'; 
+    Font-Family: 'Lato';
+}
+#contact{
+    background-color:rgb(235, 252, 188);
 }
 #contact h2{
-    
-    font-size: 48px;
-    margin-top: 45px;
+    font-size: 4.8rem;
+    margin-top: 4.5rem;
 }
 #contact-form{
     width: 70%;
@@ -262,8 +348,8 @@ header h2{
     border-bottom: 1px solid #e9ecef;
     padding-bottom: 3rem;
     margin-bottom: 4 rem;
-    margin-left: 35rem;
-    margin-right: 35rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
     text-align: left;
 }
 
